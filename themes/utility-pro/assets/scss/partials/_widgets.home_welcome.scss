@@ -1,0 +1,32 @@
+/*
+Widgets
+---------------------------------------------------------------------------------------------------- */
+
+/* Home Welcome
+--------------------------------------------- */
+
+.home-welcome {
+  background-color: rgba(#333, 0.8);
+  padding: 40px 0;
+  text-align: center;
+}
+
+.home-welcome .widgettitle {
+  color: $white;
+  text-transform: none;
+
+  @include media($smaller-screen-up) {
+    font-size: 80px;
+  }
+}
+
+.home-welcome p,
+.home-welcome .textwidget {
+  color: lighten($black, 92);
+
+  @include media($smaller-screen-up) {
+    font-size: 40px;
+    line-height: normal;
+    margin-bottom: 34px;
+  }
+}

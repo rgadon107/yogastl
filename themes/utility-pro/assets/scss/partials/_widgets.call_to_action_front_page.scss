@@ -1,0 +1,53 @@
+/*
+Widgets
+---------------------------------------------------------------------------------------------------- */
+
+/* Call to Action
+------------------------------------------------ */
+
+.call-to-action-bar {
+  background-color: rgba($red-brown, 0.9); //Yoga St. Louis custom color.
+  color: $gold-yellow; 	//Yoga St. Louis custom color.
+  padding: 0; 			//Yoga St. Louis - eliminate all padding around CTA bar.
+  text-align: center;
+
+  @include media($medium-screen-up) {
+    text-align: left;
+  }
+}
+
+.call-to-action-bar .enews p {
+  margin: 12px 0;
+  width: 100%;
+
+  @include media($medium-screen-up) {
+    clear: left;
+    float: left;
+    margin-bottom: 0;
+    width: 35%;
+  }
+}
+
+@include media($medium-screen-up) {
+
+  .call-to-action-bar .enews-widget input[type="submit"] {
+    float: right;
+    margin: -2px 0 0;
+    width: 35%;
+  }
+
+  .call-to-action-bar .enews form {
+    float: right;
+    text-align: right;
+    width: 60%;
+  }
+
+  .call-to-action-bar .enews input[type="email"] {
+    height: 57px;
+    margin-right: 3px;
+    position: relative;
+    top: -2px;
+    width: 60%;
+  }
+
+}

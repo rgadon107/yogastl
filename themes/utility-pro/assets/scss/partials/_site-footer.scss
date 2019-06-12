@@ -1,0 +1,24 @@
+/*
+Site Footer
+---------------------------------------------------------------------------------------------------- */
+
+.site-footer {
+	background-color: $red-brown;	//Yoga St. Louis custom color.
+	color: $gold-yellow;			//Yoga St. Louis custom color
+	font-size: $footer-font-size;
+	padding: 40px 0;
+	text-align: center;
+}
+
+.site-footer a {
+	color: $gold-yellow;  //Yoga St. Louis custom color
+}
+
+.site-footer a:hover {
+	border-bottom: 0;
+	color: $brick-red;  //Yoga St. Louis custom color
+}
+
+.site-footer p {
+	margin: 0;
+}

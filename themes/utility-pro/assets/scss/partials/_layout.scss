@@ -1,0 +1,166 @@
+/*
+Structure and Layout
+---------------------------------------------------------------------------------------------------- */
+
+/* Site Containers
+--------------------------------------------- */
+
+.site-container {
+	//@include media($smallest-screen-up) {
+	//	max-width: $smallest-screen;
+	//}
+    //
+	//@include media($smaller-screen-up) {
+	//	max-width: $smaller-screen-up;
+	//}
+    //
+    //@include media($small-screen-up)	{
+		//max-width: $base-wrap-max-width;
+    //}
+
+	@include media($medium-screen-up) {
+		max-width: $wrap-max-width-extra-large;
+		margin: 0 auto;
+		//padding: 0px 20px;
+	}
+}
+
+
+.wrap {
+	margin: 0 auto;
+	padding: 0 5%;
+	max-width: 100%;
+	word-wrap: break-word;
+
+	// breakpoint: 1440px+
+	@include media($large-screen-up) {
+		max-width: $wrap-max-width-large; // 1200px
+		padding: 0;
+	}
+}
+
+// # Set background color for blog posts and pages.
+.site-inner {
+	background: $light-yellow;	//Yoga St. Louis custom color.
+	padding-top: 40px;
+}
+
+.utility-landing .site-container {
+	margin: 40px auto;
+	max-width: $wrap-max-width-medium;
+}
+
+/* Content & Primary Sidebar
+--------------------------------------------- */
+
+@include media($medium-screen-up) {
+
+	@include direction-context(right-to-left) {
+		.content {
+			@include span-columns(8);
+			@include omega;
+		}
+
+		.sidebar-primary {
+			@include span-columns(4);
+		}
+	}
+}
+
+/*
+Sidebar
+---------------------------------------------------------------------------------------------------- */
+
+.sidebar {
+	font-size: $base-font-size;
+}
+
+.sidebar p:last-child,
+.sidebar ul > li:last-child {
+	margin-bottom: 0;
+}
+
+.sidebar li {
+	list-style-type: none;
+	margin-bottom: 6px;
+	padding: 0;
+}
+
+.sidebar .widget {
+	background: rgba($gold-yellow, 0.5);
+	border-top: none;	//Yoga St. Louis customization
+	margin-bottom: 40px;
+	padding: 40px;
+}
+
+.sidebar .widget-wrap {
+	border-top: 5px solid $red-brown;//lighten($black, 11);
+	margin-left: 4px;
+}
+
+.sidebar .search-form input[type="search"] {
+	width: 100%;
+}
+
+
+
+/* Column Widths and Positions
+--------------------------------------------- */
+
+.full-width-content .content {
+	float: none;
+	margin: 0 auto;
+	width: 100%;
+}
+
+@include media($medium-screen-up) {
+
+	.content-sidebar .content,
+	.sidebar-content .sidebar-primary {
+		float: left;
+	}
+}
+
+/* Column Classes
+Link: http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css
+--------------------------------------------- */
+
+@include media($small-screen-up) {
+
+	.one-half,
+	.three-sixths,
+	.two-fourths {
+		@include span-columns(6);
+	}
+
+	.one-third,
+	.two-sixths {
+		@include span-columns(4);
+	}
+
+	.four-sixths,
+	.two-thirds {
+		@include span-columns(8);
+	}
+
+	.one-fourth {
+		@include span-columns(3);
+	}
+
+	.three-fourths {
+		@include span-columns(9);
+	}
+
+	.one-sixth {
+		@include span-columns(2);
+	}
+
+	.five-sixths {
+		@include span-columns(10);
+	}
+
+	.last {
+		@include omega();
+		clear: right;
+	}
+}

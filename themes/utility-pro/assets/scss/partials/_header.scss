@@ -1,0 +1,169 @@
+/*
+Site Header
+---------------------------------------------------------------------------------------------------- */
+
+.site-header {
+	// background: rgba($light-yellow, 0.5); // Yoga St. Louis custom color.
+	background-image: radial-gradient(circle, rgba($light-yellow, 0.5), $gold-yellow);
+	border-bottom: 1px solid $gold-yellow;
+	margin: 0 auto;
+	text-align: center;
+}
+
+
+ .site-header .wrap {
+	 padding: 10px 0;
+ 	 max-width: $base-wrap-max-width; // 782px
+	 line-height: 1.0;
+
+
+ 	@include media($medium-screen-up)	{
+		max-width: $wrap-max-width-large + 80px; // 1280px
+		padding: 15px 0;
+ 	}
+
+	 @include media($large-screen-up)	{
+		 padding: 20px 0;
+	 }
+
+}
+
+// Add an .avatar class within the header for Gravatar.
+.site-header .avatar {
+  float: none;
+}
+
+// Add an img tag inside the .site-avatar class within the header for Gravatar.
+.site-header .site-avatar img {
+  display: block;
+  height: 70px;
+  margin: 5px auto 5px;
+  width: 70px;
+}
+
+/* Title Area
+--------------------------------------------- */
+
+.title-area {
+	display: inline-block;
+	/* font-weight: 700; */
+	text-align: center;
+	margin: 0 auto;
+	height: 80px;
+
+	@include media($small-screen-up) {
+		height: 135px;
+	}
+}
+
+.site-title {
+	letter-spacing: 2px;
+	line-height: 1;
+	margin: 0px;
+	text-transform: uppercase;
+	width: 100%;
+}
+
+.site-title a,
+.site-title a:hover {
+	display: inline-block;
+	min-height: 80px;
+	margin-top: 0;
+	color: lighten($black, 11);
+	text-indent: -9999px;
+	font-family: $serif;
+	font-size: $site-title-font-size;
+	background-image: url(http://ystl-test.dev/wp-content/themes/utility-pro/images/YSTL_Banner_Logo_320W_x_80H_Mobile_view.png);
+	backgroud-repeat: no-repeat;
+
+	@include media($small-screen-up)	{
+		min-height: 135px;
+		background-image: url(http://ystl-test.dev/wp-content/themes/utility-pro/images/YSTL_Banner_Logo_400W_x_135H_Desktop_view.png);
+		backgroud-repeat: no-repeat;
+	}
+
+	@include media($large-screen-up)	{
+		margin-top: -5px;
+	}
+}
+
+.site-description {
+	text-indent: -9999px;
+	color: lighten($black, 33);
+	font-size: $base-font-size;
+	line-height: 1;
+	margin: 0;
+}
+
+.header-image .site-description,
+.header-image .site-title {
+	background-image: none;
+	white-space: nowrap;
+	cursor: pointer;
+}
+
+.header-image .site-description {
+	height: 0px;
+}
+
+.header-image .site-title > a {
+	background-position: center center;
+	background-repeat: no-repeat;
+	border: 0;
+	float: left;
+	width: 320px;
+
+
+	@include media($small-screen-up) 	{
+		width: 400px;
+	}
+
+	@include media($large-screen-up)	{
+		background-position: 35% center;
+		width: 640px;
+	}
+}
+
+/* Header Right Widget Area
+--------------------------------------------- */
+// Classes below apply to the header.header-widget-area element and class.
+
+.site-header .widget-area {
+  display: block;
+  float: right;
+  text-align: center;
+  width: 70%;
+
+  @include media($medium-screen-up) {
+  		text-align: center;
+  		width: 70%;
+  	}
+}
+
+.header-widget-area .search-form {
+	height: 53px;
+	margin: 20px auto 0;
+	width: 300px;
+
+	@include media($small-screen-up) {
+		float: right;
+		margin-top: 0;
+		width: 100%
+	}
+}
+
+.header-widget-area .genesis-nav-menu a {
+	color: $red-brown;
+}
+
+.header-widget-area .genesis-nav-menu {
+	a:hover,
+	.current-menu-item > a,
+	.sub-menu .current-menu-item > a:hover {
+		color: $red-brown; 
+	}
+
+	.sub-menu a {
+	background-color: mix($black, $gold-yellow, 5%); 
+	}	
+}

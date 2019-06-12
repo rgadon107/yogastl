@@ -1,0 +1,1 @@
+<h2><a href="<?php echo get_site_url(); ?>" id="ystl-blog-title" class="featured-content blog-title">Yoga St. Louis Blog</a></h2>

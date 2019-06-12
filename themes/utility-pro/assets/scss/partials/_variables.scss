@@ -1,0 +1,95 @@
+// Colors
+$black: #000;
+$white: #fff;
+
+$blue: #0964dd;
+$purple: #339;
+$green: #107952;
+$red: #d3131b;
+
+$comments-background-color: rgba($gold-yellow,0.5);
+$author-box-background: lighten($black, 92);
+
+
+// Widths
+$max-width: 1200px; // theme default: 1140px
+
+// Global Screen Sizes
+//------------------------------------------------------------------------------
+$smallest-screen: $max-width - 880px; // 320px;
+$smaller-screen: $max-width - 660px; // 540px;
+$small-screen: $max-width - 418px; // 782px;
+$medium-screen: $max-width - 176px; // 1024px
+$large-screen: $max-width + 240px; // 1440px
+
+// Global Breakpoints (for use in media queries)
+//------------------------------------------------------------------------------
+$smallest-screen-up: new-breakpoint(min-width $smallest-screen 4); // b.p. min-width = 320px; 4 total columns.
+$smaller-screen-up: new-breakpoint(min-width $smaller-screen 6); // b.p. min-width = 540px; 6 total columns.
+$small-screen-up: new-breakpoint(min-width $small-screen 12); // b.p. min-width = 782px; 12 total columns.
+$medium-screen-up: new-breakpoint(min-width $medium-screen 12); // b.p. min-width = 1024px; 12 total columns.
+$large-screen-up: new-breakpoint(min-width $large-screen 12); // b.p. min-width = 1440px; 12 total columns.
+
+// Global Max Width Settings
+//------------------------------------------------------------------------------
+$base-wrap-max-width: $max-width - 418px; // 782px;
+$wrap-max-width-medium: $max-width - 176px; // 1024px
+$wrap-max-width-large: $max-width; // 1200px
+$wrap-max-width-extra-large: $max-width + 240px; // 1440px
+
+// Global Font Families
+//------------------------------------------------------------------------------
+$sans-serif: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$sans-serif-alt: Raleway, "Helvetica Neue", Helvetica, Arial, sans-s;
+$serif: Enriqueta, serif;
+$mono: "Courier 10 Pitch", Courier, monospace;
+// Base Font Families
+//------------------------------------------------------------------------------
+$base-font-family: $sans-serif;
+$heading-font-family: $sans-serif; //Yoga St. Louis setting.
+$blockquote-font-family: $serif;
+// Base Font Sizes
+//------------------------------------------------------------------------------
+$base-font-size: 16px;
+$base-line-height: 1.625;
+$heading-line-height: 1.25;
+$secondary-font-size: floor(modular-scale(-1, $base-font-size, $major-second));
+$site-title-font-size: floor(modular-scale(5, $base-font-size, $major-second));
+/* Heading Font Properties
+* ------------------------------------------------------------------------------
+* 
+*   Within modular-scale (), $multiple = {#}-value on the scale; $base-font-size can be in px or em; 
+*	  and $major-second is the incremental ratio increase between scale values.  '$major-second' = 1.125.
+*	'floor()' means that the function assumes the absolute integer value of the real number, excluding the decimal amount.
+*/
+$h1-font-size: floor(modular-scale(6, $base-font-size, $major-second)); // modular-scale($multiple, $base-font-size, $ratio)
+$h2-font-size: floor(modular-scale(5, $base-font-size, $major-second));
+$h3-font-size: floor(modular-scale(4, $base-font-size, $major-second));
+$h4-font-size: floor(modular-scale(3, $base-font-size, $major-second));
+$h5-font-size: floor(modular-scale(2, $base-font-size, $major-second));
+$h6-font-size: floor(modular-scale(1, $base-font-size, $major-second));
+// Header Font Properties
+//------------------------------------------------------------------------------
+$header-font-family: $heading-font-family;
+// Title Font Properties
+//------------------------------------------------------------------------------
+$loop-title-size: $h1-font-size;
+$box-title-size: $h4-font-size;
+$widget-title-size: $h6-font-size;
+// Menu Font Properties
+//------------------------------------------------------------------------------
+$menu-toggle-size: $h2-font-size;
+$nav-font-size: $secondary-font-size;
+$subnav-font-size: $secondary-font-size;
+$pagination-font-size: $secondary-font-size;
+// Form Font Properties
+//------------------------------------------------------------------------------
+$form-font-size: $base-font-size;
+$form-font-family: $base-font-family;
+// Entry Font Properties
+//------------------------------------------------------------------------------
+$gallery-caption-font-size: $secondary-font-size - 2;
+$wp-caption-font-size: $secondary-font-size - 2;
+// Footer Font Properties
+//------------------------------------------------------------------------------
+$footer-font-size: $secondary-font-size;

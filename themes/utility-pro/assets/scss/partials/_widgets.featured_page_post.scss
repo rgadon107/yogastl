@@ -1,0 +1,21 @@
+/*
+Widgets
+---------------------------------------------------------------------------------------------------- */
+
+/* Featured Page and Featured Post
+--------------------------------------------- */
+
+.featured-content .entry {
+  border-bottom: 2px solid lighten($black, 92);
+  padding: 10px 10px 10px 10px;
+}
+
+.sidebar .featured-content .entry {
+  border-bottom: 0;
+  margin-bottom: 10px;
+}
+
+.featured-content .entry-title {
+  font-size: 18px;
+  margin: 10px 0;
+}

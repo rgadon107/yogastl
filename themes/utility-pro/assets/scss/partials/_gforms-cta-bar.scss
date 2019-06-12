@@ -1,0 +1,102 @@
+/*GF EMAIL SIGN-UP IN CALL-TO-ACTION SECTION OF HOME PAGE
+------------------------------------------------------------------  */
+/* Target text widget lead paragraph with extra CSS class in Call-To-Action widget.  */
+.call-to-action-bar #text-13 .textwidget .cta-tw-header {
+	font-size: $h3-font-size
+}
+
+/* Target text widget & Email Signup form in Call-To-Action widget. */
+.call-to-action-bar #text-13 .textwidget {
+
+	font-size: $h4-font-size; 
+	padding-top: 60px;
+	
+	@include media($medium-screen-up)		{
+	width: 32%;
+	float: left;
+	}
+}
+
+/* Target Email Signup from in Call-to-Action widget. */
+.call-to-action-bar #gform_widget-2 		{
+	
+	@include media($medium-screen-up) {
+	width: 66%;
+	float: right;
+	}
+}
+/*  Remove added margin to move input fields closer to one another. */
+.gform_wrapper .gform_body li#field_2_2.gfield		{
+	margin: 0px;
+}
+
+/*  Remove added margin to move input fields closer to one another. */
+.gform_wrapper .gform_body li#field_2_4.gfield		{
+	margin: 0px;
+}
+
+/* Change default color of asterisk for required input field on email signup form. */
+.gform_wrapper span.gfield_required			{
+	color: $gold-yellow; 				//Yoga St. Louis custom color
+}
+
+/*  Remove duplicate labels below input fields for name on email signup form. */
+div.gform_wrapper .ginput_complex label		{
+	display: none;
+}
+
+/*  Increase width of email input field to 100% in mobile view. */
+#gform_wrapper_2 .top_label input.medium, 	{
+	width: 100%;
+	
+	@include media($medium-screen-up) 	{
+		width: 47.5%
+	}
+}
+
+/* Call-to-Action widget, Email Signup Form: change default background color from white to yellow. */
+#gform_widget-2 .gform_body .gform_fields .gfield .ginput_complex input,
+#gform_widget-2 .gform_body .gform_fields .gfield .ginput_container input {
+	background-color: $gold-yellow;		//Yoga St. Louis custom color
+}
+
+#gform_widget-2 .gform_wrapper .gform_footer input:hover[type="submit"] {
+	background-color: rgba($gold-yellow,0.5); //Yoga St. Louis custom color
+}
+
+/* CTA widget, Email Signup Form: change default background color from white to yellow on submit. */
+#gform_widget-2 .gform_wrapper .gform_footer input[type=submit] {
+	background-color: $gold-yellow;		//Yoga St. Louis custom color
+	color: $red-brown;					//Yoga St. Louis custom color
+}
+
+/* Allow 'send' button in email signup form to expand to screen width on small screens. */
+#gform_widget-2 .gform_footer input#gform_submit_button_2 .gform_button .button		{
+	width: 100%;						
+	
+	@include media($medium-screen-up) 	{
+		width: auto
+	}
+}
+
+/* CTA widget, Email Signup Form: change background & border color of validation error message box. */
+.call-to-action-bar #gform_widget-2 .gform_wrapper div.validation_error {
+	color: $gold-yellow;			//Yoga St. Louis custom color
+	border-top: 2px solid $gold-yellow;
+	border-bottom: 2px solid $gold-yellow;
+}
+
+/* Reduce width of 'SEND' button on contact page form. */
+.site-inner .gform_wrapper .gform_footer input.button,
+.site-inner .gform_wrapper .gform_footer input #gform_submit_button_5 {
+	width: 33%;
+}
+
+/*GF CONTACT FORM
+------------------------------------------------------------------  */
+/* Input fields for contact form. */
+input#input_5_2,
+input#input_5_1_3,
+input#input_5_1_6 {
+	background-color: #fffff6;
+}

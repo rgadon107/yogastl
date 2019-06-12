@@ -1,0 +1,44 @@
+/*
+Widgets
+---------------------------------------------------------------------------------------------------- */
+
+/* Home Gallery
+--------------------------------------------- */
+
+.home-gallery {
+  background: scale-color($gold-yellow, $lightness: 25%);//rgba($gold-yellow, 0.5);
+  padding: 40px 0 20px;
+}
+
+.home-gallery .fa {
+  color: $blue;
+}
+
+.home-gallery .widget {
+  padding: 0 19px;
+  text-align: left; //Yoga St. Louis - left align the widget text
+}
+
+.home-gallery .widget-title {
+  font-size: $h2-font-size; //Yoga St. Louis customization
+  text-align: center;		  //Yoga St. Louis customization
+}
+
+.home-gallery-1,
+.home-gallery-2,
+.home-gallery-3,
+.home-gallery-4 {
+  text-align: left; //By the cascade, should keep widget header & images center aligned.
+  width: 100%;
+
+  @include media($small-screen-up) {
+    float: left;
+    width: 50%;
+  }
+
+  @include media($medium-screen-up) {
+    float: left;
+    width: 25%;
+  }
+
+}

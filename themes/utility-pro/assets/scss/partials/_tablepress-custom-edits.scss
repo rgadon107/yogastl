@@ -1,0 +1,17 @@
+/*
+TABLEPRESS EDITS - for Class Schedule information
+----------------------------------------------------------------------------------  */
+/* Center align header & data in all course schedule tables*/
+tbody td.column-3 {
+	text-align: center;
+}
+
+/*Restore header & data text align to left */
+.tablepress-id-5 tbody td.column-3 {
+	text-align: left;
+}
+
+/*Override in-line style for middle column of 6-mo. schedule. */
+.tablepress-id-5 th.column-2[style] {
+	width: 125px !important;
+}

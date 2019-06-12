@@ -1,0 +1,63 @@
+/*
+Widgets
+---------------------------------------------------------------------------------------------------- */
+
+/*
+Footer Widgets
+---------------------------------------------------------------------------------------------------- */
+
+.footer-widgets {
+  background-color: transparentize($red-brown, 0.1);   // Yoga St. Louis custom color
+  color: $gold-yellow;  // Yoga St. Louis custom color
+  padding: 40px 0;
+}
+
+.footer-widgets-1,
+.footer-widgets-2,
+.footer-widgets-3 {
+  float: left;
+  margin: 0;
+  width: 100%;
+
+  @include media($small-screen-up) {
+    width: 30%;
+  }
+}
+
+.footer-widgets-1,
+.footer-widgets-2 {
+  @include media($small-screen-up) {
+    margin-right: 5%;
+  }
+}
+
+.footer-widgets a {
+  color: $gold-yellow;  // Yoga St. Louis custom color
+}
+
+.footer-widgets a:hover {
+  color: $brick-red;  // Yoga St. Louis custom color
+}
+
+.footer-widgets .widget {
+  margin-bottom: 24px;
+}
+
+.footer-widgets .widgettitle {
+  color: $brick-red;  // Yoga St. Louis custom color
+  font-size: $h2-font-size;
+}
+
+.footer-widgets .entry {
+  background: transparent;
+}
+
+.footer-widgets li {
+  list-style-type: none;
+  margin-bottom: 6px;
+  word-wrap: break-word;
+}
+
+.footer-widgets .search-form input[type="search"] {
+  width: 100%;
+}
