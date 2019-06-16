@@ -69,7 +69,7 @@ function load_admin_files() {
 }
 
 /**
- *  Helper function used above to load each of the speciied files.
+ *  Helper function used above to load each of the specified files.
  *
  * @since 1.0.0
  *
