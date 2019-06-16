@@ -17,9 +17,9 @@ add_action( 'genesis_meta', 'utility_pro_homepage_setup' );
 function utility_pro_homepage_setup() {
 
 	$home_sidebars = array(
-		'home_welcome' 	            => is_active_sidebar( 'utility-home-welcome' ),
-		'home_gallery_1'            => is_active_sidebar( 'utility-home-gallery-1' ),
-		'call_to_action'            => is_active_sidebar( 'utility-call-to-action' ),
+		'home_welcome'   => is_active_sidebar( 'utility-home-welcome' ),
+		'home_gallery_1' => is_active_sidebar( 'utility-home-gallery-1' ),
+		'call_to_action' => is_active_sidebar( 'utility-call-to-action' ),
 	);
 
 	// Return early if no sidebars are active.
@@ -50,14 +50,14 @@ function utility_pro_homepage_setup() {
 	}
 
 	/**
-	 *  Full width layout on front-page.php.  
-	 *  
-	 *  Uncomment 'add_filter()' below to allow full-width layout on 
-	 *  'front-page.php'.  Removing the primary sidebar from 'front-page.php' does not  
-	 *  remove sidebar from the archive posts page. 
+	 *  Full width layout on front-page.php.
+	 *
+	 *  Uncomment 'add_filter()' below to allow full-width layout on
+	 *  'front-page.php'.  Removing the primary sidebar from 'front-page.php' does not
+	 *  remove sidebar from the archive posts page.
 	 */
 	// add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
-		
+
 
 	// Remove standard loop and replace with loop showing Posts, not Page content.
 	remove_action( 'genesis_loop', 'genesis_do_loop' );
@@ -74,7 +74,7 @@ function utility_pro_add_home_welcome() {
 	genesis_widget_area( 'utility-home-welcome',
 		array(
 			'before' => '<div class="home-welcome"><div class="wrap">',
-			'after' => '</div></div>',
+			'after'  => '</div></div>',
 		)
 	);
 }
@@ -135,22 +135,28 @@ function utility_pro_add_call_to_action() {
 		'utility-call-to-action',
 		array(
 			'before' => '<div class="call-to-action-bar"><div class="wrap">',
-			'after' => '</div></div>',
+			'after'  => '</div></div>',
 		)
 	);
 }
 
 /**
  * Display latest posts instead of static page.
- * (Commenting out ths code below to prevent display of latest posts when 
+ * (Commenting out ths code below to prevent display of latest posts when
  * 'is_front_page()' is set.
  *
  * @since 1.0.0
  */
 function utility_pro_front_loop() {
 	global $query_args;
-	genesis_custom_loop( wp_parse_args( $query_args, array( 'post_type' => 'post', 'paged' => get_query_var( 'page' ) ) ) );
-
+	genesis_custom_loop(
+		wp_parse_args( $query_args,
+			array(
+				'post_type' => 'post',
+				'paged'     => get_query_var( 'page' )
+			)
+		)
+	);
 }
 
 genesis();
