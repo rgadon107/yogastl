@@ -152,8 +152,8 @@ function utility_pro_front_loop() {
 	genesis_custom_loop(
 		wp_parse_args( $query_args,
 			array(
-				'post_type' => 'post',
-				'paged'     => get_query_var( 'page' )
+				'post_type'      => 'post',
+				'paged'          => get_query_var( 'page' )
 			)
 		)
 	);
